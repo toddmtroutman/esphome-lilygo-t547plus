@@ -3,14 +3,12 @@ to support the ESP32-S3 [LILYGO T5 4.7" Plus E-paper display](https://www.lilygo
 
 (Do not confuse it with the original ESP32-based Lilygo T5 4.7 board.)
 
+This component was shoddily adapted from a component for the older board revision by [vbaksa](https://github.com/vbaksa/esphome/tree/dev/esphome/components/lilygo_t5_47_battery), so it definitely needs improvement.  
+
 ## Usage
 
 To use the board with [ESPHome](https://esphome.io/) **you have to put quite a
-number of options in your esphome config**:
-* Configure the aprpopriate board, variant, and framework versions in the
-[esp32 platform](https://esphome.io/components/esp32.html)
-* Set a bunch of `platformio_options`
-* Include the component from this repository as `external_components` 
+number of options in your esphome config**, see the examples at https://github.com/nickolay/esphome-lilygo-t547plus
 
 ```yaml
 # ... required esp32, platformio_options configuration omitted for brevity ...
