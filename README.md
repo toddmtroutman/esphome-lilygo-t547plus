@@ -26,9 +26,6 @@ sensor:
   - platform: template
     name: "Battery Percentage"
     id: battery_percentage
-    unit_of_measurement: "%"
-    accuracy_decimals: 0
-    device_class: battery
     lambda: |-
       // tweak values in mapping for calibration
       // 4.1 = max voltage
