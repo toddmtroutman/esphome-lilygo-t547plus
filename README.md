@@ -30,8 +30,11 @@ sensor:
     accuracy_decimals: 0
     device_class: battery
     lambda: |-
-      int y = (1-(4.1-id(battery_voltage).voltage->state)/(4.1-3.3))*100;
-      if (y < 100) {return y;} else {return 100;};
+      // tweak values in mapping for calibration
+      // 4.1 = max voltage
+      // 3.3 = min voltage
+      float y = (id(battery_voltage).voltage->state - 3.3) * 100.0 / (4.1 - 3.3);
+      if (y < 100.0) { return y; } else { return 100.0; };
 ```
 
 ## Discussion
